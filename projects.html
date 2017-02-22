@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" type="text/css" href="stylez.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
 	<head>
+		<div class="nav_bar">
+			<div class="name_content">
+				<a class="name_header_unselected" href="index.html" style="color:rgb(0,0,0);">Varun<br>Nambiar</a>
+			</div>
+			<ul class="nav_bar">
+				<li style="" class="nav_bar"><a class="nav_element" href="projects.html" style="font-size: 20pt; font-weight: bold; color:rgb(92, 154, 197);" >Projects |</a></li>
+				<li class="nav_bar"><a class="nav_element" href="resume.html">Contact</a></li>
+			</ul>
+		</div>
 	</head>
 
 	<body>
-		<div class="nav_bar">
-			<ul>
-				<li style="float:left"><a href="index.html">Varun Nambiar</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
-				<li><a href="resume.html">RESUME</a></li>
-				<li><a href="projects.html">PROJECTS</a></li>
-			</ul>
-		</div>
-		
-		<div class="content_box">
-			<h1 id="bio_header">Come back in a bit. My website is still under construction.</h1>
+		<!-- <br> -->
+		<div class="projects_page_content_section">
+			<h1 class="projects_heading">&mdash; Current Projects &mdash;</h1>
+			<div class="project_overview_section">
+				<h2 class="project_title">Haptic Augmented Reality Glasses</h2>
+				<p class="project_title">Jan. 2017 - Ongoing</p>
+				<p> Section is still being updated. Come back in a bit. </p>
+			</div>
+			<h1 class="projects_heading">&mdash; Past Projects &mdash;</h1>
+			<div class="project_overview_section">
+				<h2 class="project_title">Hack-A-Thing Gripper</h2>
+				<p class="project_title">Sep. 2016 - Oct. 2016</p>
+				<p> My friends and I participated in a hackathon sponsored by BMW to develop a custom gripper that could pickup and place a tomato, water bottle and book. We decided to 3D print the entire model since it allowed us to reduce the cost of the project and build a complex gear system that would have been incredibly tedious with a traditional CNC approach. After many brainstorming sessions we settled on a 3 prong gripper that was powered by servo motors. As seen below the gripper turned out quite well and quite colorful.</p>
+				<div class="image_container">
+					<img src="./assets/arm1.jpg" width="40%" height="40%" class="project_writeup">
+					<img src="./assets/arm2.jpg" width="40%" height="40%" class="project_writeup">
+				</div>
+				<p>Since I was the only Electrical Engineer on the team, I was tasked with coding and interfacing the appropriate sensors for the manipulator. Making the manipulator move autonomously was far more difficult than anticipated. After we manually moved the manipulator to the desired location on the testbed we sent it a 5V impulse and it would have to execute the appropriate actuation to pickup the object.</p>
+				<p>However we didn't know which object would be under the manipulator and we couldn't upload new code to the Arduino running the manipulator before each pickup. So we kind of skirted around the rules by exploiting some of the givens for the competition. <span style="color: red;">(DISCLAIMER: This would fail miserably in a real situation!)</span> We knew the dimensions of each of the objects we had to pick up so we placed a depth sensor and RGB LED for the manipulator's operator to know when to send the 5V signal to the arm. We knew what the height of the manipulator had to be from the testbed to appropriately grab each of the objects and so we would display the appropriate colors on the RGB when the manipulator was in the optimal height range for picking up a object.</p>
+				<p>It wasn't an elegant solution. But it worked. At least 33.3333% of the time.</p>
+			</div>
 		</div>
 	</body>
 </html>
-
